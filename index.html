@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prutha's Task Management Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="animatedBackground"></canvas>
+    <div class="wrapper">
+        <header>
+            Task Management Application by I372 Prutha
+        </header>
+
+        <div class="container">
+            <div>
+                <input type="text" id="taskName" placeholder="Task Name">
+                <input type="text" id="taskDescription" placeholder="Task Description">
+                <input type="date" id="taskDueDate" placeholder="Due Date">
+                <button id="addTaskButton">Add Task</button>
+            </div>
+
+            <div>
+                <label for="filterSelect">Filter Tasks:</label>
+                <select id="filterSelect">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="pending">Pending</option>
+                </select>
+
+                <input type="text" id="searchInput" placeholder="Search Tasks">
+            </div>
+
+            <div id="taskList"></div>
+            <div id="message"></div>
+        </div>
+    </div>
+    
+    <footer>
+        © Prutha Annadate 2025 Task Management App
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

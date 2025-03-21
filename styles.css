@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Animated Background Styling - Controlled by JavaScript */
+#animatedBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Header Styling */
+header {
+    background-color: #7D5BA6;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Main Content Container */
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 12px;
+    flex-grow: 1;
+}
+
+/* Input Styling */
+input {
+    margin: 5px;
+    padding: 10px;
+    width: calc(50% - 14px);
+    border: 1px solid #7D5BA6;
+    border-radius: 5px;
+}
+
+/* Styling for the date input and search input */
+#taskDueDate, #searchInput {
+    width: calc(100% - 14px);
+}
+
+/* Button Styling */
+button {
+    background-color: #9D84B7;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #7D5BA6;
+}
+
+/* Styling for Each Task Item */
+.task-item {
+    background-color: #D1BCE3;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #7D5BA6;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+}
