@@ -1,5 +1,5 @@
 // ===============================
-// Task Class Definition
+// Task Class Definition 
 // ===============================
 
 class Task {
@@ -75,13 +75,20 @@ const renderTasks = () => {
     document.querySelectorAll('.delete-task').forEach(button => button.addEventListener('click', handleDeleteTask));
     document.querySelectorAll('.toggle-task').forEach(checkbox => checkbox.addEventListener('change', handleToggleTask));
 };
-
+//Updated such that due dates can't be before today
 const addTask = () => {
     const name = taskNameInput.value.trim();
     const description = taskDescriptionInput.value.trim();
     const dueDate = taskDueDateInput.value.trim();
 
     if (!name || !description) return;
+
+    const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
+
+    if (dueDate && dueDate < today) {
+        alert("Due date cannot be in the past. Please select today or a future date.");
+        return;
+    }
 
     tasks.push(new Task(name, description, dueDate));
     taskNameInput.value = '';
@@ -91,7 +98,8 @@ const addTask = () => {
     renderTasks();
 };
 
-// Edit Task Handler
+
+// Edit Task Handler : Updated such that due dates can't be before today 
 const handleEditTask = (event) => {
     const index = event.target.dataset.index;
     const task = tasks[index];
@@ -100,6 +108,13 @@ const handleEditTask = (event) => {
     const newDueDate = prompt('Edit Task Due Date (YYYY-MM-DD):', task.dueDate);
 
     if (newName && newDescription) {
+        const today = new Date().toISOString().split('T')[0];
+
+        if (newDueDate && newDueDate < today) {
+            alert("Due date cannot be in the past. Please select today or a future date.");
+            return;
+        }
+
         task.name = newName;
         task.description = newDescription;
         if (newDueDate) task.dueDate = newDueDate;
