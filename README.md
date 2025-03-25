@@ -18,6 +18,8 @@ cd task-tracker
 
 Open `index.html` in your browser.
 
+**Note:** As of the update on March 25, 2025, users can only set due dates for today or future dates—past dates are no longer allowed. 
+
 ## Screenshots
 
 ### Main View
@@ -27,7 +29,7 @@ Open `index.html` in your browser.
 ### Adding a Task
 
 ![Adding a Task](adding-task.png)
-
+![Due Date Update](due_date_edit.png) 
 ### Editing & Deleting Tasks
 
 ![Editing](edit-delete.png)
